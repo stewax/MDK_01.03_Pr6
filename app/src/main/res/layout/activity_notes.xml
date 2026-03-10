@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas. android. com/apk/res-auto"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas. android. com/tools"
+    xmlns:tools2="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background=" @color/white"
+    tools:context=". presentations. NotesActivity">
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_search"
+        android:hint="Поиск ..."
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/black"
+        android:textColorHint=" #ACB8C5"
+        app2:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEnd0f="parent"
+        app:layout_constraintStart_toStart0f="parent"
+        app:layout_constraintTop_toTop0f="parent"
+        tools2:layout_editor_absoluteX="10dp" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/ic_search"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStart0f="parent"
+        app:layout_constraintTop_toTop0f="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintTop_toBottomOf="@+id/et_search"
+        app:layout_constraintBottom_toBottom0f="parent"
+        app:layout_constraintEnd_toEnd0f="parent"
+        app:layout_constraintStart_tostart0f="parent"
+        app:layout_constraintTop_toBottom0f="0+id/et_search"
+        tools2:layout_editor_absoluteX="10dp">
+
+        <GridLayout
+            android:id="@+id/gl_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2" />
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bth_add_notes"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/background_button"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottom0f="parent"
+        app:layout_constraintEnd_toEnd0f="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

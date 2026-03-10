@@ -34,11 +34,11 @@ public class NotesActivity extends AppCompatActivity {
         etSearch = findViewById(R.id.et_search);
 
         bthAddNotes.setOnClickListener(v -> {
-            Intent intentActivityNote = new Intent(this, NotesActivity.class);
+            Intent intentActivityNote = new Intent(this, NoteActivity.class);
             startActivity(intentActivityNote);
         });
 
-        etSearch.setOnClickListener(SearchListener);
+        etSearch.setOnKeyListener(SearchListner);
         LoadNotes(RepoNotes.Notes);
     }
 
@@ -64,7 +64,7 @@ public class NotesActivity extends AppCompatActivity {
             int Position = i;
 
             item_notes.setOnClickListener(v -> {
-                Intent intentActivityNote = new Intent(this, NotesActivity.class);
+                Intent intentActivityNote = new Intent(this, NoteActivity.class);
                 intentActivityNote.putExtra("position", Position);
                 startActivity(intentActivityNote);
             });
@@ -74,7 +74,6 @@ public class NotesActivity extends AppCompatActivity {
     }
 
     View.OnKeyListener SearchListner = new View.OnKeyListener(){
-
         @Override
         public boolean onKey(View v, int keyCode, KeyEvent event){
             String Search = etSearch.getText().toString();

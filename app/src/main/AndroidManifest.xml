@@ -15,6 +15,13 @@
         <activity
             android:name=".presentations.MainActivity"
             android:exported="true">
+
+        </activity>
+        <activity android:name=".presentations.NoteActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".presentations.NotesActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

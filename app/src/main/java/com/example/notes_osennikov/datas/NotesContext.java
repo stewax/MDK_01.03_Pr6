@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class NotesContext {
 
-    public static ArrayList<Note> getAllNotes() {
+    public static ArrayList<Note> AllNotes() {
         ArrayList<Note> allNotes = new ArrayList<>();
 
         Cursor cursor = DbContext.sqliteDatabase.query(
